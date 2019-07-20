@@ -11,6 +11,7 @@
 		<h3>Alteração de tarefa</h3>
 		<form class="form-horizontal" action="/tarefas/alterar" method="post" th:object=${tarefa}>
 			<input type="hidden" th:field="*{id}">
+			<input type="hidden" th:field="*{usuario}">
 			<div class="row">
 				<div class="form-group col-md-6">
 					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('titulo')}">
